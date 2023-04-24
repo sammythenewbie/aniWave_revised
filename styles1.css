@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'HankenGrotesk';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('HankenGrotesk-VariableFont_wght.ttf') 
+       format('truetype');
+}
+
+ @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+:root {
+    --font-family-defaul: 'HankenGrotesk', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+}
+body {
+  width: 100%;
+  height:100%;
+  font-family: "Varela Round", sans-serif; 
+  /*font-family: var(--font-family-default);*/
+  font-size: var(--fs-600);
+  font-weight: bold;
+  color: var(--clr-neutral-700);
+}
+body ul {
+  width: 100%;
+  height:15%;
+  background:#004AAD;
+  display: flex;
+  padding-inline:15px;
+  padding-block:10px;
+  color:white;
+  list-style-type: none;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  gap: 15px;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5)
+}
+ul li a {
+  color:white;
+}
+
+li:nth-child(1){
+  float:right;
+  margin-right: auto;
+}
+/*li:nth-child(2) {
+  font-size:2rem;
+  margin-right:1rem;
+}*/
+.fa-wave-square {
+  color:gold;
+  font-size: 2rem;
+}
+.dateTime {
+  font-size: 0.7rem;
+  display: flex;
+  padding: 5px 10px;
+  gap:20px;
+  padding-block: 20px;
+  margin-block: 10px;
+}
+span.and {
+margin-left: auto;
+}
+.fa-android {
+  color: #32DE84;
+  font-size: 1rem;
+
+}
+.dateTime > span.date, span.timer, span.and {
+  display: flex;
+  align-items:  center;
+  gap:5px;
+  letter-spacing: 2px;
+}
+.featured{
+  width: 90%;
+  height: 30%;
+  background: #004AAD;
+  margin:1rem auto;
+  display: block;
+  border-radius: 20px;
+  padding:10px;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5)
+}
+.featured .featuredContent {
+  width: 100%;
+  height:100%;
+}
+.featured .featuredContent p {
+  text-indent: 30px;
+  text-align: justify;
+  display: block;
+  line-height: 1.5;
+  color: white;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+.featured .featuredContent p span:nth-child(1){
+  color: gold;
+}
+.featured .featuredContent p   span:nth-child(2){
+  background-color: #905BBF;
+  padding-inline:5px;
+  padding-block:2px;
+  border-radius: 5px;
+}
+.featured .featuredContent p span i {
+  margin: 0;
+  padding: 0;
+}
+.featured .featuredContent img {
+  width: inherit;
+  border-radius: 10px;
+}
+.animeGallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  background: #004AAD;
+  padding:0px 0;
+}
+.animeGallerysongs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  background: #004AAD;
+  padding:0px 0;
+}
+.animeGallery .scroller {
+  min-width: 100%;
+  background: #004AAD;
+  display: flex;
+  padding: 10px 10px;
+  height: 50%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 10px;
+  margin-block: 5px;
+}
+.animeGallery .scrollersongs {
+  min-width: 100%;
+  background: #004AAD;
+  display: flex;
+  padding: 10px 10px;
+  height: 50%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow: scroll;
+  gap: 10px;
+  margin-block: 5px;
+  list-style: none;
+}
+.animeGallery .scrollersongs li {
+  margin-inline: auto;
+  text-indent: 20px;
+  color:white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+audio {
+  width:92vw;
+}
+.animeGallery .scroller::after {
+  content: " ";
+  height:5px;
+  background:gray;
+}
+.animeGallery .scroller li {
+  width:200px;
+  height: 30%;
+  list-style-type: none;
+  font-size: 1.2rem;
+  color:white;
+  object-fit: cover;
+}
+.animeGallery .scroller li a {
+  text-decoration-line: none;
+  color: white; 
+  line-height: 1.5;
+}
+.animeGallery .scroller li i {
+  padding-left:10px;
+}
+.animeGallery .scroller li:nth-child(1) {
+  margin-top:0;
+}
+.animeGallery .scroller li img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-bottom:5px;
+}
+.animeGallery h3 {
+  display:block;
+  padding: 10px;
+  color:white;
+  text-align: center;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+.animeGallery .scroller:nth-child(2) h3{
+  border-top: 3px solid white;
+}
+hr {
+  width:100px;
+  margin-top: 15px;
+  height:5px;
+  border-radius: 10px;
+  background: lightgrey;
+  margin-inline: auto;
+}
+footer .ulFooter {
+    display: flex;
+    background: white;
+    z-index: 1;
+}
+footer .ulFooter li {
+  list-style-type: none;
+  color:#004AAD;
+  font-size: 1rem;
+  text-align: center;
+}
+footer .ulFooter li i {
+  font-size: 40px;
+  color:#004AAD;
+  line-height: 1.5;
+}
+footer .ulFooter li a {
+  text-decoration: none;
+  color: inherit;
+}
+footer small p  {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-inline: auto;
+  padding: 5px;
+}
+li img {
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+}
+h5, small > p {
+  color:#004AAD;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20%;
+  transition: 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.sidenav a {
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.4s;
+  white-space: nowrap;
+  font-size: 1.3rem;
+}
+.sidenav a:hover {
+  color: white;
+  background: #9e9e9e;
+}
+.sidenav .close-btn {
+  font-size: 2.5rem;
+}
+.sidenav .close-btn:hover {
+  background: initial;
+  transform: scale(1.05);
+}
+.fa-heart {
+  color: #d68e9b;
+}
+.fa-user-secret {
+  margin: none;
+  padding: none;
+}
+
+
+
+@media screen and (max-height: 480px) {
+  .sidenav {
+    padding-top: 3rem;
+  }
+  .sidenav a {
+    font-size: 1.5rem;
+  }
+}
+.topnav {
+  background-color: #9CCC65;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+.login {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:10px;
+  padding:5px;
+  flex-direction: column;
+  margin-top: 17rem;
+}
+button {
+  width:100%;
+  padding:10px 15px;
+  border-radius: 20px;
+  display: block;
+  border:2px currentColor;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+button:nth-child(1) {
+  background: springgreen;
+}
+button:nth-child(2) {
+  background: #004AAD;
+  color:white;
+}
+div a i {
+  margin-right: 10px;
+  color: gold;
+}
+#iframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+iframe {
+  margin-inline:auto;
+}
+button .fa-user-plus, .fa-circle-user {
+  margin-right: auto;
+  float: left;
+  font-size: 1.3rem;
+}
