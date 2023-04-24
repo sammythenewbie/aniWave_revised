@@ -25,9 +25,9 @@ label.logo{
   color: white;
   font-size: 1rem;
   line-height: 60px;
-  padding: 0;
+  padding-left: 2rem;
   font-weight: bold;
-  margin-left:0.6rem;
+  margin-left:0;
 }
 nav ul{
   float: right;
@@ -63,6 +63,167 @@ a.active,a:hover{
 #check{
   display: none;
 }
+@media (min-width:900px) {
+  .search {
+    width: fit-content;
+    padding: 10px;
+    background: white;
+    border-radius: 3rem;
+    display:flex;
+    margin-right: 10px;
+    align-items: center;
+    font-size: 0.5rem;
+  }
+  .fa-magnifying-glass {
+  color: black;
+  font-size: 1.5rem;
+}
+  input {
+    min-width: 10rem;
+    width:10rem;
+    height:1rem;
+    background: white;
+    outline: none;
+    border-radius: 2rem;
+    border: none;
+  }
+  label.logo {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    padding: 0;
+    font-weight: bold;
+    margin-left: 1.2rem;
+  }
+ 
+.featured .featuredContent {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 100;
+}
+.featured .featuredContent p {
+  text-indent: 1.2rem;
+  text-align: justify;
+  width:50%;
+  line-height: 1.5;
+  color: white;
+  padding: 20px 10px;
+  font-size:3rem;
+}
+.featured .featuredContent p span:nth-child(3){
+  color: gold;
+  font-weight: bold;
+}
+.featured .featuredContent p span:nth-child(2){
+  color: gold;
+  font-weight: bold;
+
+}
+.featured .featuredContent p   span:nth-child(4){
+  background-color: #905BBF;
+  padding-inline:5px;
+  padding-block:2px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.featured .featuredContent p span i {
+  margin: 0;
+  padding: 0;
+}
+.featured .featuredContent img {
+  width: 50%;
+  border-radius: 10px;
+}
+footer .ulFooter {
+  width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items:center;
+    background: white;
+    z-index: 1;
+}
+footer .ulFooter li {
+  list-style-type: none;
+  color:#004AAD;
+  font-size: 1rem;
+  text-align: center;
+  float: left;
+}
+footer .ulFooter li i {
+  font-size: 40px;
+  color:#004AAD;
+  line-height: 1.5;
+  display: block;
+}
+footer .ulFooter li a {
+  text-decoration: none;
+  color: inherit;
+}
+footer small p  {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-inline: auto;
+  padding: 5px;
+}
+li img {
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+}
+h5 {
+  padding:10px;
+}
+h5, small > p {
+  color:#004AAD;
+}
+.animeGallerysongs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  background: #004AAD;
+  padding:0px 0;
+}
+.animeGallery .scroller {
+  min-width: 100%;
+  background: #004AAD;
+  display: flex;
+  padding: 10px 10px;
+  height: 50%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 10px;
+  margin-block: 5px;
+}
+.animeGallery .scrollersongs {
+  min-width: 100%;
+  background: #004AAD;
+  display: flex;
+  padding: 10px 0.8rem;
+  height: 50%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: scroll;
+  gap: 10px;
+  margin-block: 5px;
+  list-style: none;
+}
+.animeGallery .scrollersongs li {
+  width:50%;
+  text-indent: 20px;
+  color:white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+audio {
+  width:50vw;
+}
+}
 @media (max-width: 952px){
   label.logo{
     font-size: 30px;
@@ -71,6 +232,14 @@ a.active,a:hover{
   nav ul li a{
     font-size: 16px;
   }
+  input {
+    display:none;
+    
+  }
+  .fa-magnifying-glass {
+      color: white;
+      font-size: 1.5rem;
+    }
 }
 @media (max-width: 858px){
   .checkbtn{
@@ -110,7 +279,7 @@ section{
 .fa-wave-square {
   color:gold;
   font-size: 2rem;
-  margin-left:-1.5rem;
+  margin-left: -0.9rem;
 }
 .dateTime {
   font-size: 0.7rem;
@@ -155,7 +324,7 @@ margin-left: auto;
   line-height: 1.5;
   color: white;
   padding: 20px 10px;
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 30px, 1.2rem);
 }
 .featured .featuredContent p span:nth-child(3){
   color: gold;
@@ -218,20 +387,42 @@ margin-left: auto;
   padding: 10px 0.8rem;
   height: 50%;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   overflow: scroll;
   gap: 10px;
   margin-block: 5px;
   list-style: none;
 }
 .animeGallery .scrollersongs li {
-  text-indent: 20px;
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+  background: white;
+  width:fit-content;
+  height: auto;
+  padding: 10px;
+  background-image: url("zenitsu1.jpg");
+  background-position: left;
+  padding:50px 10px;
   color:white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  margin-inline:auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
 }
 audio {
-  width:92vw;
+  width:50vw;
+  display: block;
+}
+.animeGallery .scrollersongs li span {
+  background: #FF5996;
+  padding: 10px;
+  border-radius: 5px;
+  margin-block: 5px;
+  margin-inline: 10px;
 }
 .animeGallery .scroller::after {
   content: " ";
@@ -431,11 +622,16 @@ button .fa-user-plus, .fa-circle-user {
   text-decoration: none;
   color: gold;
 }
-.fa-magnifying-glass {
-  color:white;
-  font-size: 1.5rem;
-}
 .search {
   margin-left: auto;
   padding:1rem;
+}
+.fa-icons{
+  color:/*#61A1F8*/ orange;
+}
+.fa-fire {
+  color:#fb6767;
+}
+.fa-music {
+  color:/*#FF5996*/#61A1F8;
 }
